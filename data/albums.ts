@@ -4,41 +4,22 @@ export interface Album { id: string; title: string; description: string; cover: 
 
 export const albums: Album[] = [
   {
-    "id": "terra-journey",
-    "title": "泰拉大陆纪行",
-    "description": "关于源石、孤星与前文明的视觉记录（测试用相册）",
-    "cover": "https://bu.dusays.com/2026/03/24/69c24230de927.jpg",
-    "date": "2026.01",
+    "title": "燕云十六声",
+    "description": "苍生无言 侠为其声",
+    "cover": "https://img.cdn1.vip/i/6a8b5be0cf3de_1787517920.webp",
+    "id": "album_1787517930257",
     "photos": [
       {
-        "url": "https://bu.dusays.com/2026/03/31/69cb69bb530d8.jpg",
-        "caption": "原来的人"
+        "url": "https://img.cdn1.vip/i/6a8b54626a1d2_1787516002.webp",
+        "caption": ""
       },
       {
-        "url": "https://bu.dusays.com/2026/03/24/69c24230de927.jpg",
-        "caption": "星空漫游"
+        "url": "https://img.cdn1.vip/i/6a8b549770e70_1787516055.webp"
+      },
+      {
+        "url": "https://img.cdn1.vip/i/6a8b54d4b0564_1787516116.webp"
       }
-    ]
-  },
-  {
-    "id": "history-tour",
-    "title": "唐宋历史巡游",
-    "description": "寻访千年前的长安与汴梁遗迹（测试用相册）",
-    "cover": "https://bu.dusays.com/2026/03/24/69c24230a4efe.jpg",
-    "date": "2025.10",
-    "photos": [
-      {
-        "url": "https://bu.dusays.com/2026/03/24/69c24230a5ff8.jpg",
-        "caption": "古都夕阳"
-      },
-      {
-        "url": "https://bu.dusays.com/2026/03/24/69c24230d661d.jpg",
-        "caption": "青石板小路"
-      },
-      {
-        "url": "https://bu.dusays.com/2026/03/24/69c24230de927.jpg",
-        "caption": "飞檐翘角"
-      }
-    ]
+    ],
+    "date": "2026-08-23"
   }
 ];
