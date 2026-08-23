@@ -4,8 +4,9 @@ date: '2026-03-26 07:00:00'
 tags:
 - 学术
 - 科研
+- 机器学习
 mood: ''
-cover: https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg
+cover: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZiFB_6s5ZoDjfj9D1kgw5wUjpTnUn_9vzjHQUTbrqboFEr3KWUlnbsKd8ZV0m4VuOjxLlzsjefNqBFC8n-vxDObcJfkFfyl4pWB7Z4ck0vjjoKezmBLlMBK2xoJDdMRoEHo2EDDurTWtT/s1600/svm2.PNG
 description: SVM简介
 ---
 
@@ -37,6 +38,9 @@ SVM 的核心任务是在多维空间中寻找一个超平面，将两类数据�
 * **优化目标**：寻找最佳决策边界的问题，转化为求解两类数据的**最大间隔**问题。
 * **支持向量（Support Vector）**：距离决策边界最近的样本数据点。这些点决定了间隔的大小，也是 SVM 名称的由来。
 
+  
+‍
+
 ### 三、数学直觉与超平面方程
 
 假设决策边界的超平面方程为 ( w\_1x\_1 + w\_2x\_2 + b = 0 )。  
@@ -59,7 +63,6 @@ SVM 的核心任务是在多维空间中寻找一个超平面，将两类数据�
 * **硬间隔（Hard Margin）**：要求所有数据点必须被正确分类，且间隔最大化。若存在异常点，为了容纳该点，间隔距离会被迫缩小，影响整体模型性能。-
 * **软间隔（Soft Margin）**：引入\*\*损失因子\*\*概念，允许部分数据点违背规则。
 
-  
 ‍
 
 ### 五、升维转换与核技巧
@@ -69,7 +72,6 @@ SVM 的核心任务是在多维空间中寻找一个超平面，将两类数据�
 * **升维转换**：通过合适的维度转换函数，将低维数据映射到高维空间。在高维空间中，原本线性不可分的数据可能变得线性可分，从而可以通过超平面进行分割。-
 * **核技巧（Kernel Trick）**：利用 \*\* 核函数（Kernel Function）\*\*直接测量高维向量间的相似度。无需知晓具体的维度转换函数，也无需将数据实际送入高维空间计算，即可直接获得数据的高维差异度并据此进行分类判断。
 
-  
 ‍
 
 ### 六、总结与后续展望
