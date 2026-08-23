@@ -22,7 +22,7 @@ export const siteConfig = {
   useGradient: false,
   themeColors: ["#a18cd1", "#fbc2eb", "#a1c4fd", "#c2e9fb"], // 呼吸流动的颜色组合
 // 修改这里：变成图片数组
-  bgImages: ["https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg", "https://bu.dusays.com/2026/03/24/69c26fe4acdb5.jpg", "https://bu.dusays.com/2026/03/24/69c26fe4d9486.jpg"],
+  bgImages: ["https://img.cdn1.vip/i/6a8b5422cac0c_1787515938.webp", "https://img.cdn1.vip/i/6a8b54626a1d2_1787516002.webp", "https://img.cdn1.vip/i/6a8b549770e70_1787516055.webp", "https://img.cdn1.vip/i/6a8b54d4b0564_1787516116.webp"],
 
   // 4. 文章默认封面图 (当 Markdown 没写 cover 时显示)
   defaultPostCover: "https://bu.dusays.com/2026/03/24/69c1e38b346cb.jpg",
