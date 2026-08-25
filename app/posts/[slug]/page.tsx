@@ -75,8 +75,8 @@ async function getPostData(slug: string) {
 
   const processedContent = await unified()
     .use(remarkParse)
-    .use(remarkGfm)
     .use(remarkMath, { singleDollar: true, doubleDollar: true })
+    .use(remarkGfm)
     // 🌟 allowDangerousHtml 必须开启，这样上面生成的 <br /> 才能顺利通过变成真正的换行！
     .use(remarkRehype, { allowDangerousHtml: true })
     // 🌟 核心升级：开启代码语言自动侦测，并限制白名单，大幅提高 C++ 和常用语言的猜中率！
@@ -150,8 +150,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 <style>{`
                   .prose h1 { font-size: 1.8rem !important; font-weight: 900 !important; margin-bottom: 1.2rem !important; margin-top: 2rem !important; line-height: 1.3 !important; color: inherit !important; }
                   .prose h2 { font-size: 1.5rem !important; font-weight: 800 !important; margin-bottom: 1rem !important; margin-top: 1.5rem !important; color: inherit !important; }
-                  .prose h3 { font-size: 1.2rem !important; font-weight: 700 !important; margin-bottom: 0.8rem !important; color: inherit !important; }
-                  .prose p { font-size: 0.95rem !important; line-height: 1.75 !important; color: inherit !important; }
+                  .prose h3 { font-size: 1.2rem !important; font-weight: 700 !important; margin-bottom: 0.8rem !important; margin-top: 1.8rem !important; color: inherit !important; }
+                  .prose h4 { font-size: 1.05rem !important; font-weight: 700 !important; margin-bottom: 0.7rem !important; margin-top: 1.4rem !important; color: inherit !important; }
+                  .prose p { font-size: 0.95rem !important; line-height: 1.85 !important; margin-bottom: 0.8rem !important; margin-top: 0.5rem !important; color: inherit !important; }
+                  .katex-display { margin: 1.5rem 0 !important; overflow-x: auto !important; overflow-y: hidden !important; padding-bottom: 0.5rem !important; }
+                  .katex-display > .katex { max-width: 100% !important; }
                   
                   .prose a { color: #6366f1 !important; text-decoration: none !important; font-weight: 600 !important; border-bottom: 1px dashed #6366f1 !important; transition: all 0.3s ease !important; }
                   .prose a:hover { color: #4f46e5 !important; border-bottom-style: solid !important; background-color: rgba(99, 102, 241, 0.1) !important; padding: 0 0.2rem !important; border-radius: 0.2rem !important; }
@@ -159,7 +162,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                   .dark .prose a:hover { color: #a5b4fc !important; background-color: rgba(129, 140, 248, 0.15) !important; }
                   .prose ul { list-style-type: disc !important; padding-left: 1.5rem !important; font-size: 0.95rem !important; }
                   .prose ol { list-style-type: decimal !important; padding-left: 1.5rem !important; font-size: 0.95rem !important; }
-                  .prose li { display: list-item !important; margin-bottom: 0.5rem !important; }
+                  .prose li { display: list-item !important; margin-bottom: 0.8rem !important; line-height: 1.75 !important; }
                   
                   .prose ul ul, .prose ol ul { list-style-type: circle !important; margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
                   .prose ol ol, .prose ul ol { list-style-type: lower-alpha !important; margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
@@ -220,10 +223,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                   @media (min-width: 768px) {
                     .prose h1 { font-size: 3rem !important; font-weight: 950 !important; margin-bottom: 2rem !important; margin-top: 3rem !important; line-height: 1.1 !important; }
                     .prose h2 { font-size: 2.2rem !important; margin-bottom: 1.5rem !important; margin-top: 2rem !important; }
-                    .prose h3 { font-size: 1.5rem !important; margin-bottom: 1rem !important; }
-                    .prose p { font-size: 1.15rem !important; line-height: 1.85 !important; }
+                    .prose h3 { font-size: 1.5rem !important; margin-bottom: 1.2rem !important; margin-top: 2.2rem !important; }
+                    .prose h4 { font-size: 1.25rem !important; margin-bottom: 1rem !important; margin-top: 1.8rem !important; }
+                    .prose p { font-size: 1.15rem !important; line-height: 1.95 !important; margin-bottom: 1rem !important; margin-top: 0.75rem !important; }
                     
                     .prose ul, .prose ol { padding-left: 2rem !important; font-size: 1.1rem !important; }
+                    .prose li { margin-bottom: 1rem !important; line-height: 1.85 !important; }
+                    .katex-display { margin: 2rem 0 !important; padding-bottom: 0.75rem !important; }
                     
                     .prose pre { padding: 1.25rem !important; margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
                     .prose pre code { font-size: 0.9em !important; }
