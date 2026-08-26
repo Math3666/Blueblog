@@ -18,7 +18,7 @@ description: 涵盖数论基础定理、对称加密、RSA 公钥加密与 DSA �
 
 $$
 
-a=p\_1p\_2\cdots p\_k
+a=p_1p_2\cdots p_k
 
 $$
 
@@ -60,15 +60,15 @@ $$
 
 的整数 `x,y`。
 
-‍**示例：求** `15x + 21y = gcd(15,21)`
+**示例：求** `15x + 21y = gcd(15,21)`
 
 #### 步骤 1：通过欧几里得算法求 gcd
 
 核心逻辑：用较大数除以较小数，替换为"除数"与"余数"的组合，直到余数为 0，此时的除数即为 GCD。
 
-* 第 1 步：$21 = 15 \times 1 + 6$（余数 $r\_{1} = 6 \neq 0$，继续）
-* 第 2 步：$15 = 6 \times 2 + 3$（余数 $r\_{2} = 3 \neq 0$，继续）
-* 第 3 步：$6 = 3 \times 2 + 0$（余数 $r\_{3} = 0$，停止）
+* 第 1 步：$21 = 15 \times 1 + 6$（余数 $r_{1} = 6 \neq 0$，继续）
+* 第 2 步：$15 = 6 \times 2 + 3$（余数 $r_{2} = 3 \neq 0$，继续）
+* 第 3 步：$6 = 3 \times 2 + 0$（余数 $r_{3} = 0$，停止）
 
 此时除数为 $3$，因此 $\gcd(15, 21) = 3$，目标转化为求 $15x + 21y = 3$ 的一组整数解。
 
@@ -114,7 +114,7 @@ $$
 
 \begin{aligned}
 
-3 &= 15 - (21 \times 2 - 15 \times 2) \
+3 &= 15 - (21 \times 2 - 15 \times 2) \\
 
 &= 15 \times 3 + 21 \times (-2)
 
@@ -237,7 +237,7 @@ $$
 
 $$
 
-n=\prod\_{p\mid n}p^{k\_p}
+n=\prod_{p\mid n}p^{k_p}
 
 $$
 
@@ -249,7 +249,7 @@ $$
 
 =
 
-n\prod\_{p\mid n}
+n\prod_{p\mid n}
 
 \left(1-\frac1p\right)
 
@@ -384,7 +384,7 @@ $$
 
 $$
 
-m\_1,m\_2,\ldots,m\_r
+m_1,m_2,\ldots,m_r
 
 $$
 
@@ -392,7 +392,7 @@ $$
 
 $$
 
-a\_1,a\_2,\ldots,a\_r
+a_1,a_2,\ldots,a_r
 
 $$
 
@@ -402,13 +402,13 @@ $$
 
 \begin{cases}
 
-x\equiv a\_1\pmod{m\_1}\\
+x\equiv a_1\pmod{m_1}\\
 
-x\equiv a\_2\pmod{m\_2}\\
+x\equiv a_2\pmod{m_2}\\
 
 \vdots\\
 
-x\equiv a\_r\pmod{m\_r}
+x\equiv a_r\pmod{m_r}
 
 \end{cases}
 
@@ -418,19 +418,19 @@ $$
 
 $$
 
-M=m\_1m\_2\cdots m\_r
+M=m_1m_2\cdots m_r
 
 $$
 
 意义下存在唯一解。
 
-构造公式
+#### 构造公式
 
 令：
 
 $$
 
-M=\prod\_{i=1}^{r}m\_i
+M=\prod_{i=1}^{r}m_i
 
 $$
 
@@ -438,7 +438,7 @@ $$
 
 $$
 
-M\_i=\frac{M}{m\_i}
+M_i=\frac{M}{m_i}
 
 $$
 
@@ -446,7 +446,7 @@ $$
 
 $$
 
-M\_iM\_i^{-1}\equiv1\pmod{m\_i}
+M_iM_i^{-1}\equiv1\pmod{m_i}
 
 $$
 
@@ -458,7 +458,7 @@ $$
 
 x\equiv
 
-\sum\_{i=1}^{r}a\_iM\_iM\_i^{-1}
+\sum_{i=1}^{r}a_iM_iM_i^{-1}
 
 \pmod M
 
@@ -471,15 +471,15 @@ $$
 **步骤**：
 
 1. $M = 5 \times 4 \times 3 = 60$
-2. $M\_{1} = 60/5 = 12$，求 $12$ 模 $5$ 的逆元：$12 \equiv 2 \pmod{5}$，$2 \times 3 = 6 \equiv 1 \pmod{5}$，故 $M\_{1}^{-1} = 3$，对应项 $36 \times 2$
-3. $M\_{2} = 60/4 = 15$，求 $15$ 模 $4$ 的逆元：$15 \equiv 3 \pmod{4}$，$3 \times 3 = 9 \equiv 1 \pmod{4}$，故 $M\_{2}^{-1} = 3$，对应项 $45 \times 3$
-4. $M\_{3} = 60/3 = 20$，求 $20$ 模 $3$ 的逆元：$20 \equiv 2 \pmod{3}$，$2 \times 2 = 4 \equiv 1 \pmod{3}$，故 $M\_{3}^{-1} = 2$，对应项 $40 \times 0$
+2. $M_{1} = 60/5 = 12$，求 $12$ 模 $5$ 的逆元：$12 \equiv 2 \pmod{5}$，$2 \times 3 = 6 \equiv 1 \pmod{5}$，故 $M_{1}^{-1} = 3$，对应项 $36 \times 2$
+3. $M_{2} = 60/4 = 15$，求 $15$ 模 $4$ 的逆元：$15 \equiv 3 \pmod{4}$，$3 \times 3 = 9 \equiv 1 \pmod{4}$，故 $M_{2}^{-1} = 3$，对应项 $45 \times 3$
+4. $M_{3} = 60/3 = 20$，求 $20$ 模 $3$ 的逆元：$20 \equiv 2 \pmod{3}$，$2 \times 2 = 4 \equiv 1 \pmod{3}$，故 $M_{3}^{-1} = 2$，对应项 $40 \times 0$
 
 $$
 
 \begin{aligned}
 
-a &= 36 \times 2 + 45 \times 3 + 40 \times 0 \
+a &= 36 \times 2 + 45 \times 3 + 40 \times 0 \\
 
 &= 27 \pmod{60}
 
@@ -514,8 +514,8 @@ $$
 
 本节课的 PRNG 特指使用不安全的 `random` 库函数引入的随机数。
 
-* 这类 `random` 随机数的原理是\*\*梅森旋转（MT19937）\*\*
-* 连续获取 $624 \times 32 = 19,!968$ 字节的连续随机生成数据即可恢复随机数生成器状态
+* 这类 `random` 随机数的原理是**梅森旋转（MT19937）**
+* 连续获取 $624 \times 32 = 19,968$ 字节的连续随机生成数据即可恢复随机数生成器状态
 
 **攻击示例（Python / randcrack）**：
 
@@ -532,7 +532,7 @@ rc.submit(random.getrandbits(64)) # 提交 624 个 64 位数
 
 print(random.getrandbits(64)) # 利用 random 库获取一个 64 位的随机数
 
-print(rc.predict\_getrandbits(64)) # 利用 randcrack 预测的随机数
+print(rc.predict_getrandbits(64)) # 利用 randcrack 预测的随机数
 ```
 
 #### 线性同余生成器（LCG）
@@ -541,22 +541,22 @@ print(rc.predict\_getrandbits(64)) # 利用 randcrack 预测的随机数
 
 $$
 
-X\_{n+1}\equiv aX\_n+c\pmod n
+X_{n+1}\equiv aX_n+c\pmod n
 
 $$
 
-其具备很强的线性相关性，故容易被数学推导来破解，往往只需要几组连续的输出 $X\_{i}$ 即可。
+其具备很强的线性相关性，故容易被数学推导来破解，往往只需要几组连续的输出 $X_{i}$ 即可。
 
 #### 反馈移位寄存器（FSR）
 
-结构：由 $n$ 个寄存器 $a\_{n-1}, a\_{n-2}, \dots, a\_{0}$ 组成，输出序列 $\underline{a} = a\_{0} a\_{1} a\_{2} \cdots$，反馈函数为 $F(x\_{1}, x\_{2}, \dots, x\_{n})$。
+结构：由 $n$ 个寄存器 $a_{n-1}, a_{n-2}, \dots, a_{0}$ 组成，输出序列 $\underline{a} = a_{0} a_{1} a_{2} \cdots$，反馈函数为 $F(x_{1}, x_{2}, \dots, x_{n})$。
 
 * 新生成的信息与当前的状态相关
 * 即：
 
 $$
 
-a\_{n} = F(a\_{0}, a\_{1}, a\_{2}, \dots, a\_{n-2}, a\_{n-1})
+a_{n} = F(a_{0}, a_{1}, a_{2}, \dots, a_{n-2}, a_{n-1})
 
 $$
 
@@ -566,7 +566,7 @@ $F$ 是线性函数，即：
 
 $$
 
-a\_{n} = \sum\_{i=0}^{n-1} c\_{i} a\_{i}
+a_{n} = \sum_{i=0}^{n-1} c_{i} a_{i}
 
 $$
 
@@ -574,7 +574,7 @@ $$
 
 $$
 
-S\_1=(a\_1,\ldots,a\_n)
+S_1=(a_1,\ldots,a_n)
 
 $$
 
@@ -586,13 +586,13 @@ $$
 
 $$
 
-S\_n=(a\_n,\ldots,a\_{2n})
+S_n=(a_n,\ldots,a_{2n})
 
 $$
 
-即可构造出一个满秩方程组求解系数 $c\_{i}$。
+即可构造出一个满秩方程组求解系数 $c_{i}$。
 
-‍
+
 
 ### 3.2 块密码
 
@@ -700,9 +700,9 @@ $$
 
 \begin{aligned}
 
-c^d &\equiv m^{ed} \
+c^d &\equiv m^{ed} \\
 
-&\equiv m^{1+k\varphi} \
+&\equiv m^{1+k\varphi} \\
 
 &\equiv m \times (m^\varphi)^k \pmod{n}
 
@@ -724,7 +724,7 @@ $$
 
 \begin{aligned}
 
-m^{ed} &\equiv m \times (m^\varphi)^k \
+m^{ed} &\equiv m \times (m^\varphi)^k \\
 
 &\equiv m \pmod{n}
 
@@ -758,7 +758,7 @@ $$
 
 * $p$ 高低位泄露，或者相关运算代数式泄露
 
-**2.两对公钥 $n\_{1}, n\_{2}$ 不互素**
+**2.两对公钥 $n_{1}, n_{2}$ 不互素**
 
 * 用不同的公钥进行加密，但选取不当导致能直接通过 $\gcd$ 分解 $n$
 
@@ -778,13 +778,13 @@ $$
 
 常见的有如下类别：
 
-**1.$d\_{p}, d\_{q}$ 信息泄露**
+**1.$d_{p}, d_{q}$ 信息泄露**
 
 * 可以通过构造同余方程用 CRT 来解出私钥 $d$ 进而解密
 
 **2.$d$ 过小**
 
-* 当 $d < \frac{1}{3} N^{\frac{1}{4}}$ 的时候，可以通过对 $\frac{e}{N}$ 连分数展开来求出 $d$（\*\*Wiener's Attack\*\*）
+* 当 $d < \frac{1}{3} N^{\frac{1}{4}}$ 的时候，可以通过对 $\frac{e}{N}$ 连分数展开来求出 $d$（**Wiener's Attack**）
 
 #### 低加密指数相关攻击公式
 
@@ -792,7 +792,7 @@ $$
 
 $$
 
-n = \gcd(c\_{2} - c\_{1}^2,\ c\_{3} - c\_{1}^3)
+n = \gcd(c_{2} - c_{1}^2,\ c_{3} - c_{1}^3)
 
 $$
 
@@ -843,7 +843,7 @@ r \equiv (g^k \bmod p) \bmod q \tag{2}
 
 $$
 
-很自然的，把 (1) 代入 (2)，算出来的 $r\_{0}$ 和 $r$ 如果一致，那就说明参数都没受到影响，明文也就是可信的了。
+很自然的，把 (1) 代入 (2)，算出来的 $r_{0}$ 和 $r$ 如果一致，那就说明参数都没受到影响，明文也就是可信的了。
 
 接下来分析 Bob 如何通过手头已有的数据计算，确实能得到 $r$：
 
@@ -877,13 +877,13 @@ $$
 
 $$
 
-u\_{1} \equiv g^{(H(m))s^{-1}} \pmod{q}
+u_{1} \equiv g^{(H(m))s^{-1}} \pmod{q}
 
 $$
 
 $$
 
-u\_{2} \equiv y^{rs^{-1}} \pmod{q}
+u_{2} \equiv y^{rs^{-1}} \pmod{q}
 
 $$
 
@@ -891,7 +891,7 @@ $$
 
 $$
 
-r \equiv (u\_{1} \times u\_{2} \bmod p) \bmod q
+r \equiv (u_{1} \times u_{2} \bmod p) \bmod q
 
 $$
 
