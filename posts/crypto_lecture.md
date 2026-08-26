@@ -4,6 +4,7 @@ date: '2026-08-26 02:00:00'
 tags:
 - crypto
 - 数论
+- ctf
 mood: ''
 cover: https://www.jiamisoft.com/blog/wp-content/uploads/2018/10/23822-1.jpg
 description: 涵盖数论基础定理、对称加密、RSA 公钥加密与 DSA 数字签名四大部分。
@@ -152,7 +153,7 @@ $$
 
 ## 二、三大数论定理
 
-### 2.1 费马小定理（Fermat's Little Theorem）
+### 2.1 费马小定理
 
 #### 定义
 
@@ -401,11 +402,11 @@ $$
 
 \begin{cases}
 
-x\equiv a\_1\pmod{m\_1}\
+x\equiv a\_1\pmod{m\_1}\\
 
-x\equiv a\_2\pmod{m\_2}\
+x\equiv a\_2\pmod{m\_2}\\
 
-\vdots\
+\vdots\\
 
 x\equiv a\_r\pmod{m\_r}
 
@@ -423,7 +424,7 @@ $$
 
 意义下存在唯一解。
 
-#### 构造公式
+构造公式
 
 令：
 
@@ -573,15 +574,19 @@ $$
 
 $$
 
-\begin{cases}
+S\_1=(a\_1,\ldots,a\_n)
 
-S\_{1} = (a\_{1}, \dots, a\_{n}) \
+$$
 
-\quad \vdots \
+$$
 
-S\_{n} = (a\_{n}, \dots, a\_{2n})
+\vdots
 
-\end{cases}
+$$
+
+$$
+
+S\_n=(a\_n,\ldots,a\_{2n})
 
 $$
 
@@ -749,11 +754,11 @@ $$
 
 常见的有如下类别：
 
-1.**$p, q$ 信息泄露**
+**1.$p, q$ 信息泄露**
 
 * $p$ 高低位泄露，或者相关运算代数式泄露
 
-2.**两对公钥 $n\_{1}, n\_{2}$ 不互素**
+**2.两对公钥 $n\_{1}, n\_{2}$ 不互素**
 
 * 用不同的公钥进行加密，但选取不当导致能直接通过 $\gcd$ 分解 $n$
 
